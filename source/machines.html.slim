@@ -1,0 +1,13 @@
+---
+title: マシン構成メモ
+---
+
+- data.machines.each do |hostname, attrs|
+  h2= hostname
+  dl.row-dl
+    - attrs.each do |k, v|
+      dt= k
+      dd
+        - Array(v).each do |x|
+          = x
+          br

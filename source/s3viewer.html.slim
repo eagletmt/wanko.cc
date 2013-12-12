@@ -1,0 +1,29 @@
+---
+title: s3viewer
+---
+
+= javascript_include_tag "https://sdk.amazonaws.com/js/aws-sdk-2.0.0-rc2.min.js"
+= javascript_include_tag 's3viewer'
+css:
+  input, button { margin: 2px; }
+
+p#error-message.error
+
+- form_tag('#', id: 'config') do
+  - type = { secretAccessKey: 'password' }
+  - %i[accessKeyId secretAccessKey region bucket].each do |key|
+    div
+      = label_tag(key, caption: "#{key}: ")
+      - if key == :secretAccessKey
+        = password_field_tag(key, id: key)
+      - else
+        = text_field_tag(key, id: key)
+  div
+    = check_box_tag(:save, id: :save, checked: true)
+    = label_tag(:save, caption: 'Save config to localStorage')
+  button#view-button View
+button#clear-config-button Clear localStorage
+ul#objects
+
+javascript:
+  init();

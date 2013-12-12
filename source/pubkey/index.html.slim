@@ -1,0 +1,7 @@
+h1 Public keys
+- Pathname.new(__FILE__).parent.each_child.sort_by { |path| path.basename }.each do |path|
+  - if path.file? && path.readable? && path.extname == '.pub'
+    .public-key
+      = link_to path.basename, "/pubkey/#{path.basename}"
+      pre
+        code= path.read

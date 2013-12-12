@@ -1,0 +1,11 @@
+---
+title: wanko.cc
+---
+
+#top-links
+  ul
+    - data.links.each do |link|
+      li= link_to link, link
+div
+  ul
+    li= link_to 'マシン構成メモ', '/machines.html'

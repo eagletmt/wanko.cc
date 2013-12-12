@@ -1,0 +1,62 @@
+@import "compass";
+@import "normalize";
+
+#wrapper {
+  padding: 0 20px;
+}
+
+$main-fg: #555;
+$main-bg: #f8f8f8;
+$border-color: lighten($main-fg, 20%);
+
+body {
+  color: $main-fg;
+  background-color: $main-bg;
+}
+
+a {
+  color: $main-fg;
+}
+
+#top-links {
+  border-bottom: 1px solid $border-color;
+}
+
+$dt-width: 0.20;
+$dd-width: 0.72;
+$dt-padding: 0.02;
+$dl-width: 0.50;
+
+dl.row-dl {
+  width: percentage($dl-width);
+  margin: 20px;
+  border-bottom: 1px solid $border-color;
+
+  dt, dd {
+    display: inline-block;
+    vertical-align: top;
+    padding: 3px percentage($dt-padding);
+    margin: 0;
+    border-top: 1px solid $border-color;
+  }
+  dt {
+    width: percentage($dt-width);
+  }
+  dd {
+    width: percentage($dd-width);
+  }
+}
+
+.public-key {
+  pre {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    max-width: 80ex;
+    @include word-break(break-all);
+    padding: 10px;
+  }
+}
+
+.error {
+  color: red;
+}

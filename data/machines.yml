@@ -11,8 +11,14 @@ signum (Server):
   CPU: Intel(R) Core(TM) i3-3220T CPU @ 2.80GHz
   Memory: 4GB x 2
   Motherboard: ASRock Z77M
-  HDD: WDC WD20EFRX x 4 (2TB x 4)
+  HDD:
+    - WDC WD20EFRX x 4 (2TB x 4)
+    - WDC WD40EFRX x 2 (4TB x 2, in 裸族の集合住宅5Bay SATA6G)
   SSD: Intel 330 Series SSDSC2CT060A3K5 (60GB)
+  PCI: PT2
+  PCIe:
+    - PT3
+    - SATA3E2-PCIe
 vita (Laptop):
   Model: ThinkPad X201
   CPU: Intel(R) Core(TM) i5 CPU M 560 @ 2.67GHz

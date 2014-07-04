@@ -3,6 +3,7 @@ activate :dotenv
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :rsync
+  deploy.flags = '-avzz'
   deploy.host = ENV['DEPLOY_HOST']
   deploy.port = ENV['DEPLOY_PORT']
   deploy.path = ENV['DEPLOY_PATH']

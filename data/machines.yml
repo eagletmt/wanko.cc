@@ -1,16 +1,13 @@
 reinforce (Desktop):
   CPU: Intel(R) Core(TM) i3 CPU 530 @ 2.93GHz
+  GPU: GV-N610SL-1GI (GeForce GT610)
   Memory: 2GB x 2 + 4GB x 2
   Motherboard: ASUS P7H55D-M EVO
-  HDD:
-    - WDC WD5000AAKS (500GB)
-    - HGST HDS721010CLA332 (1TB)
-    - WDC WD20EARX x 2 (2TB x 2)
   SSD: Samsung 840 Series MZ-7TD120B/IT (120GB)
 signum (Server):
-  CPU: Intel(R) Core(TM) i3-3220T CPU @ 2.80GHz
+  CPU: Intel(R) Xeon(R) CPU E3-1275L v3 @ 2.70GHz
   Memory: 4GB x 2
-  Motherboard: ASRock Z77M
+  Motherboard: ASUS B85M-E
   HDD:
     - WDC WD20EFRX x 4 (2TB x 4)
     - WDC WD40EFRX x 2 (4TB x 2, in 裸族の集合住宅5Bay SATA6G)
@@ -18,14 +15,8 @@ signum (Server):
   PCI: PT2
   PCIe:
     - PT3
-    - SATA3E2-PCIe
 vita (Laptop):
   Model: ThinkPad X201
   CPU: Intel(R) Core(TM) i5 CPU M 560 @ 2.67GHz
   Memory: 2GB x 2
   SSD: Samsung 840 PRO Series MZ-7PD128B/IT (128GB)
-longarch (Server):
-  Model: Raspberry Pi Model B
-  CPU: ARMv6-compatible processor rev 7 (v6l)
-  Memory: 512MB
-  SDHC: Transcend TS16GSDHC10 (16GB)

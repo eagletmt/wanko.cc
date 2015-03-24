@@ -1,3 +1,5 @@
+require 'compass-normalize'
+
 activate :dotenv
 
 activate :deploy do |deploy|

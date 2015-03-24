@@ -9,7 +9,7 @@ css:
 
 p#error-message.error
 
-- form_tag('#', id: 'config') do
+= form_tag('#', id: 'config') do
   - type = { secretAccessKey: 'password' }
   - %i[accessKeyId secretAccessKey region bucket].each do |key|
     div

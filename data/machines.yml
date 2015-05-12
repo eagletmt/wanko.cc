@@ -14,7 +14,7 @@ signum (Server):
   SSD: Intel 330 Series SSDSC2CT060A3K5 (60GB)
   PCI: PT2
   PCIe:
-    - PT3
+    - PT3 x 2
 vita (Laptop):
   Model: ThinkPad X201
   CPU: Intel(R) Core(TM) i5 CPU M 560 @ 2.67GHz

@@ -26,8 +26,6 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    compass-normalize (1.5)
-      compass (>= 0.12.0)
     dotenv (1.0.2)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -140,7 +138,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  compass-normalize
+  compass
   middleman
   middleman-deploy
   middleman-dotenv

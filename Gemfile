@@ -6,4 +6,4 @@ gem 'middleman-deploy'
 gem 'middleman-dotenv'
 
 gem 'slim'
-gem 'compass-normalize'
+gem 'compass'

@@ -1,5 +1,3 @@
-require 'compass-normalize'
-
 activate :dotenv
 
 activate :deploy do |deploy|
@@ -24,8 +22,10 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash
-
 end
 
 # i18n 0.6.9
 I18n.enforce_available_locales = true
+
+bower_dir = JSON.parse(File.read(File.join(root, '.bowerrc')))['directory']
+sprockets.append_path(File.join(root, bower_dir))

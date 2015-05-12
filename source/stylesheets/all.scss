@@ -1,5 +1,10 @@
+/*
+ *= require normalize.css/normalize.css
+ *= require_tree .
+ *= require_self
+ */
+
 @import "compass";
-@import "normalize";
 
 #wrapper {
   padding: 0 20px;

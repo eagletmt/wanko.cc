@@ -1,0 +1,14 @@
+---
+title: Salary
+---
+
+table
+  thead
+    tr
+      th Year
+      th Salary
+  tbody
+    - data.salary.each do |year, salary|
+      tr
+        td= year
+        td= salary

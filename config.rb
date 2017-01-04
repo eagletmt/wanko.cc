@@ -1,13 +1,10 @@
 activate :dotenv
 
-activate :deploy do |deploy|
-  deploy.build_before = true
-  deploy.method = :rsync
-  deploy.flags = '-avzz'
-  deploy.host = ENV['DEPLOY_HOST']
-  deploy.port = ENV['DEPLOY_PORT']
-  deploy.path = ENV['DEPLOY_PATH']
-  deploy.clean = true
+activate :rsync do |rsync|
+  rsync.production_server = ENV['DEPLOY_HOST']
+  rsync.path = ENV['DEPLOY_PATH']
+  rsync.user = ENV['USER']
+  rsync.rsync_flags = '-avzz'
 end
 
 set :css_dir, 'stylesheets'
@@ -27,5 +24,6 @@ end
 # i18n 0.6.9
 I18n.enforce_available_locales = true
 
+activate :sprockets
 bower_dir = JSON.parse(File.read(File.join(root, '.bowerrc')))['directory']
 sprockets.append_path(File.join(root, bower_dir))

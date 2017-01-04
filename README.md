@@ -8,5 +8,5 @@ vim .env
 
 ## Deploy
 ```sh
-bin/middleman deploy
+bin/middleman rsync production
 ```

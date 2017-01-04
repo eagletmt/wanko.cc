@@ -25,5 +25,4 @@ end
 I18n.enforce_available_locales = true
 
 activate :sprockets
-bower_dir = JSON.parse(File.read(File.join(root, '.bowerrc')))['directory']
-sprockets.append_path(File.join(root, bower_dir))
+sprockets.append_path(File.join(root, 'node_modules'))

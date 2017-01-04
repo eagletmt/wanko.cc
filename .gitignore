@@ -19,5 +19,5 @@
 # dotenv
 /.env
 
-# bower
-/vendor/assets/bower_components
+# npm
+/node_modules

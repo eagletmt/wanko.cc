@@ -7,4 +7,3 @@ gem 'middleman-rsync'
 gem 'middleman-sprockets'
 
 gem 'slim'
-gem 'compass'

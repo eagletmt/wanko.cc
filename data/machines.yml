@@ -1,8 +1,7 @@
 reinforce (Desktop):
-  CPU: Intel(R) Core(TM) i3 CPU 530 @ 2.93GHz
-  GPU: GV-N610SL-1GI (GeForce GT610)
-  Memory: 2GB x 2 + 4GB x 2
-  Motherboard: ASUS P7H55D-M EVO
+  CPU: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz
+  Memory: 8GB x 2
+  Motherboard: ASRock H270 Pro4
   SSD: Samsung 840 Series MZ-7TD120B/IT (120GB)
 signum (Server):
   CPU: Intel(R) Xeon(R) CPU E3-1275L v3 @ 2.70GHz

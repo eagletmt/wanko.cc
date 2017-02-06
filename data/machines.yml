@@ -14,6 +14,11 @@ signum (Server):
   PCI: PT2
   PCIe:
     - PT3 x 2
+zafila (Server):
+  CPU: Intel(R) Pentium(R) CPU G4560 @ 3.50GHz
+  Memory: 8GB x 1
+  Motherboard: ASRock H110M-ITX
+  SSD: Samsung 840 Series MZ-7TD120B/IT (120GB)
 vita (Laptop):
   Model: ThinkPad X201
   CPU: Intel(R) Core(TM) i5 CPU M 560 @ 2.67GHz

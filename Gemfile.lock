@@ -127,6 +127,3 @@ DEPENDENCIES
   middleman-rsync
   middleman-sprockets
   slim
-
-BUNDLED WITH
-   1.16.1

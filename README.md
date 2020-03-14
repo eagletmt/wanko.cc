@@ -2,11 +2,15 @@
 
 ## Setup
 ```sh
-bundle install
-vim .env
+yarn install
+```
+
+## Develop
+```
+yarn run develop
 ```
 
 ## Deploy
 ```sh
-bin/middleman rsync production
+yarn run cleean && yarn run build && aws s3 sync --delete public/ s3://wanko-cc/
 ```

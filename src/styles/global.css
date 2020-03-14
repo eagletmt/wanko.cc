@@ -1,0 +1,29 @@
+#wrapper {
+  padding: 0 20px;
+}
+
+:root {
+  --main-fg: #555;
+  --main-bg: #f8f8f8;
+  --border-color: #888;
+}
+
+body {
+  color: var(--main-fg);
+  background-color: var(--main-bg);
+}
+
+a {
+  color: var(--main-fg);
+}
+
+#top-links {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.public-key pre {
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  max-width: 80ex;
+  padding: 10px;
+}

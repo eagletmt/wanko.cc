@@ -1,3 +1,8 @@
+import * as React from 'react';
+import { Helmet } from 'react-helmet';
+import { Layout } from '../components/layout';
+
+const key = `
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBFLQFkcBEADNpcUUjAA8HRWiAlOgG1Yz8eJj+gz2+f0bBzR6Dssz/dCh2OPc
@@ -121,3 +126,24 @@ hFjW/wcVIDA3okT0F+AxqW4kwOX9uJSGKKcl+EZhd5E1yVYrvmxbX4qVYkTE9V39
 +L6OEvK7uEpio3Tz/hn8dqQEGQ==
 =h8ck
 -----END PGP PUBLIC KEY BLOCK-----
+`.trimStart();
+
+export default function Gpg() {
+  return  (
+    <Layout>
+      <Helmet>
+        <title>GPG Public Key</title>
+      </Helmet>
+      <dl>
+        <dt>Key</dt>
+        <dd>C48DBD97</dd>
+        <dt>Fingerprint</dt>
+        <dd>52E9 021B 40E0 EE98 9F6D  1A47 1AA5 1329 C48D BD97</dd>
+      </dl>
+      <pre>
+        <code>{key}</code>
+      </pre>
+    </Layout>
+  );
+}
+

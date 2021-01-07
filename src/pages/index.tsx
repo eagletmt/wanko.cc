@@ -10,6 +10,7 @@ const links = [
   'https://eagletmt.github.io/contests/',
   'https://telop-anime.tumblr.com',
   'https://mypage.aikatsu.com/mypages/index/FVZ8qBNy3OCCQBzd/',
+  'https://www.youtube.com/user/eagletmt',
 ].map((link) => {
   return <li key={link}><a href={link}>{link}</a></li>;
 });

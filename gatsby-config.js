@@ -9,5 +9,15 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-remove-trailing-slashes',
     },
+    {
+      resolve: 'gatsby-transformer-plaintext',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'static',
+        path: `${__dirname}/static/`,
+      },
+    },
   ],
 };

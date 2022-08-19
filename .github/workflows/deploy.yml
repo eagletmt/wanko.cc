@@ -22,5 +22,5 @@ jobs:
       - name: zola build
         run: docker run --user $UID:$GID --volume $PWD:/app --workdir /app ghcr.io/getzola/zola:v0.16.0 build
       - run: ls -lR public
-      # - run: aws s3 sync --delete public/ s3://wanko-cc/
-      # - run: aws cloudfront create-invalidation --distribution-id E3A3CSEHUOVIZZ --paths '/*'
+      - run: aws s3 sync --delete public/ s3://wanko-cc/
+      - run: aws cloudfront create-invalidation --distribution-id E3A3CSEHUOVIZZ --paths '/*'

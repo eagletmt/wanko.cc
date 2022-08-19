@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}wanko.cc{% endblock %}
+
+{% block content %}
+{% set data = load_data(path="data.toml") %}
+
+<div id="top-links">
+  <ul>
+    {% for link in data.links %}
+      <li>
+        <a href="{{ link }}">{{ link }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+<div>
+  <ul>
+    {% for page in section.pages %}
+      <li>
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

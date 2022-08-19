@@ -1,13 +1,16 @@
 resource "aws_s3_bucket" "wanko-cc" {
   bucket = "wanko-cc"
+}
 
-  website {
-    index_document = "index.html"
+resource "aws_s3_bucket_website_configuration" "wanko-cc" {
+  bucket = aws_s3_bucket.wanko-cc.bucket
+  index_document {
+    suffix = "index.html"
   }
 }
 
 resource "aws_s3_bucket_policy" "wanko-cc" {
-  bucket = aws_s3_bucket.wanko-cc.id
+  bucket = aws_s3_bucket.wanko-cc.bucket
   policy = data.aws_iam_policy_document.wanko-cc.json
 }
 
@@ -40,17 +43,25 @@ data "aws_route53_zone" "wanko-cc" {
 }
 
 resource "aws_route53_record" "wanko-cc-validation" {
+  for_each = {
+    for dvo in aws_acm_certificate.wanko-cc.domain_validation_options : dvo.domain_name => {
+      name   = dvo.resource_record_name
+      record = dvo.resource_record_value
+      type   = dvo.resource_record_type
+    }
+  }
+
   zone_id = data.aws_route53_zone.wanko-cc.id
-  name    = aws_acm_certificate.wanko-cc.domain_validation_options[0].resource_record_name
-  type    = aws_acm_certificate.wanko-cc.domain_validation_options[0].resource_record_type
-  records = [aws_acm_certificate.wanko-cc.domain_validation_options[0].resource_record_value]
+  name    = each.value.name
+  type    = each.value.type
+  records = [each.value.record]
   ttl     = 60
 }
 
 resource "aws_acm_certificate_validation" "wanko-cc" {
   provider                = aws.use1
   certificate_arn         = aws_acm_certificate.wanko-cc.arn
-  validation_record_fqdns = [aws_route53_record.wanko-cc-validation.fqdn]
+  validation_record_fqdns = [for record in aws_route53_record.wanko-cc-validation : record.fqdn]
 }
 
 locals {

@@ -1,16 +1,17 @@
 # wanko.cc
 
 ## Setup
-```sh
-yarn install
-```
+Install Zola.
+https://www.getzola.org/
 
 ## Develop
 ```
-yarn run develop
+% zola serve
 ```
 
 ## Deploy
 ```sh
-./deploy.sh
+% zola build
+% aws s3 sync --delete public/ s3://wanko-cc/
+% aws cloudfront create-invalidation --distribution-id E3A3CSEHUOVIZZ --paths '/*'
 ```

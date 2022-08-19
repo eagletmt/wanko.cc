@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path="style.css", cachebust=true) }}"/>
+  </head>
+  <body>
+    <div id="wrapper">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>
